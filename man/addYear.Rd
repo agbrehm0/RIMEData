@@ -17,3 +17,8 @@ column. Also writes this to a .csv file so the data can be added later.
 \description{
 Add Next Year to the year-by-year RIME data
 }
+\examples{
+library(tidyverse)
+
+addYear(chnAge)
+}

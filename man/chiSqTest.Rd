@@ -22,7 +22,8 @@ p-value of the Pearson Chi-Square test
 Pearson's Chi Square Test
 }
 \examples{
-totDf <- read.csv("Data Info/2021 IMEB Data.csv")
+library(tidyverse)
+
 agegrp2 <- cut(totDf$Age, c(24,29,44), labels = c("<30","30+"))
 totDf$AgeGroup2 <- agegrp2
 

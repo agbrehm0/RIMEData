@@ -17,3 +17,8 @@ structured data frame with descriptive statistic column
 \description{
 Totals or average by response
 }
+\examples{
+library(tidyverse)
+
+descStats(chnAge, "total")
+}

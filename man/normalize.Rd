@@ -17,3 +17,8 @@ only the
 \description{
 Normalize Year-by-year data
 }
+\examples{
+library(tidyverse)
+
+normalize(chnAge)
+}

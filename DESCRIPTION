@@ -19,3 +19,5 @@ Imports:
     tidyr
 URL: https://github.com/agbrehm0/RIMEData
 BugReports: https://github.com/agbrehm0/RIMEData/issues
+Depends: 
+    R (>= 2.10)

@@ -20,7 +20,8 @@ contTbl(df, var1, var2)
 2 Dimensional Contingency Table
 }
 \examples{
-totDf <- read.csv("Data Info/2021 IMEB Data.csv")
+library(tidyverse)
+
 agegroups5 <- c("25-29", "30-34", "35–39", "40-44", "45+")
 agegrp5 <-cut(totDf$Age, c(24,29,34,39,44,100),
               labels = agegroups5)

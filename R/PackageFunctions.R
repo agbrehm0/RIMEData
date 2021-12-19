@@ -15,7 +15,7 @@ library(janitor)
 #' @export
 #'
 #' @examples
-#' totDf <- read.csv("Data Info/2021 IMEB Data.csv")
+#' library(tidyverse)
 #'
 #' dfList <- separate(totDf, Hospitalcode)
 #'
@@ -36,7 +36,8 @@ separate <- function(df, sep_by) {
 #' @export
 #'
 #' @examples
-#' totDf <- read.csv("Data Info/2021 IMEB Data.csv")
+#' library(tidyverse)
+#'
 #' agegroups5 <- c("25-29", "30-34", "35–39", "40-44", "45+")
 #' agegrp5 <-cut(totDf$Age, c(24,29,34,39,44,100),
 #'               labels = agegroups5)
@@ -64,7 +65,8 @@ contTbl <- function(df, var1, var2) {
 #' @export
 #'
 #' @examples
-#' totDf <- read.csv("Data Info/2021 IMEB Data.csv")
+#' library(tidyverse)
+#'
 #' agegrp2 <- cut(totDf$Age, c(24,29,44), labels = c("<30","30+"))
 #' totDf$AgeGroup2 <- agegrp2
 #'
@@ -90,9 +92,12 @@ chiSqTest <- function(df, var1, var2, idvar = ID) {
 #' @export
 #'
 #' @examples
+#' library(tidyverse)
+#'
+#' normalize(chnAge)
 normalize <- function(df) {
   # First replace with correct NAs
-  df <- na_if(df, "n/a")
+  df <- dplyr::na_if(df, "n/a")
 
   # Get the column indexes for the possible responses
   response_cols <- df[str_which(df, pattern = 'Table')]
@@ -171,6 +176,9 @@ normalize <- function(df) {
 #' @export
 #'
 #' @examples
+#' library(tidyverse)
+#'
+#' descStats(chnAge, "total")
 descStats <- function(df, stat = c("total", "average")) {
   norm <- normalize(df)
   normdf <- norm$Normalized[[1]]
@@ -196,6 +204,7 @@ descStats <- function(df, stat = c("total", "average")) {
 #' @export
 #'
 #' @examples
+#' addYear(chnAge)
 addYear <- function(df) {
   norm <- normalize(df)
   normdf <- norm$Normalized[[1]]
