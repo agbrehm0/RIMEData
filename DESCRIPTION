@@ -1,0 +1,19 @@
+Package: RIMEData
+Type: Package
+Title: RIME Data Investigation
+Version: 0.1.0
+Author: Aaron Brehm <brehm.aaron@gmail.com>
+Maintainer: Aaron Brehm <brehm.aaron@gmail.com>
+Description: Investigates Data from the RIME Unit of the Dean's Office within 
+    IUSM. These functions only work with data that has the specific format that
+    the RIME unit uses.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.2
+Imports: 
+    dplyr,
+    janitor,
+    readxl,
+    stringr,
+    tidyr
