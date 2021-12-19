@@ -17,3 +17,5 @@ Imports:
     readxl,
     stringr,
     tidyr
+URL: https://github.com/agbrehm0/RIMEData
+BugReports: https://github.com/agbrehm0/RIMEData/issues
